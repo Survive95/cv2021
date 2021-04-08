@@ -1,0 +1,225 @@
+.leaflet-container{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.leaflet-popup-content{
+    color: black;
+    font-size: 12px;
+}
+
+.contact_content{
+    margin-top: 40px;
+    padding: 40px;
+    background-color: var(--listBackground);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.contact_details{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_details_title, .contact_form_title{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact_details_list{
+    list-style: none;
+    margin-bottom: auto;
+}
+
+.contact_details_list li{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.contact_details_list li a{
+    font-size: 20px;
+    color: var(--textColorBlack);
+}
+
+.contact_details_list li a:hover{
+  color: var(--primaryColor);
+}
+
+
+.contact_details_list li a i{
+  font-size: 30px;
+}
+
+.contact_details_list li a:hover i{
+    color: var(--primaryColor);
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.contact_form_email, .contact_form_subject{
+    height: 50px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: var(--backgroundApp);
+    border: none;
+    outline: none;
+    color: var(--textColorBlack);
+
+}
+
+.contact_form_body{
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--backgroundApp);
+    resize: none;
+}
+
+
+.contact_form_email::placeholder, .contact_form_subject::placeholder, .contact_form_body::placeholder{
+    color: var(--textColorBlack);
+}
+
+.contact_form_email:focus::placeholder, .contact_form_subject:focus::placeholder, .contact_form_body:focus::placeholder{
+    color: rgba(129, 129, 129, 0.274);
+}
+
+.contact_form_submit{
+    height: 40px;
+    color: white;
+    background-color: var(--primaryColor);
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact_form_submit:hover{
+    background-color: #334e8a;
+}
+
+.contact_form_email::placeholder, .contact_form_subject::placeholder, .contact_form_body::placeholder{
+    color: rgb(160, 160, 160);
+}
+
+.contact_form input:-webkit-autofill,
+.contact_form input:-webkit-autofill:hover, 
+.contact_form input:-webkit-autofill:focus{
+  border: 1px solid transparent;
+  -webkit-text-fill-color: var(--textColorBlack);
+  -webkit-box-shadow: 0 0 0px 1000px var(--backgroundApp) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact_notifs{
+    margin-top: auto;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    animation: popin 0.5s linear;
+}
+
+.contact_notifs::before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f164";
+    margin-right: 15px;
+    color: rgb(31, 196, 31);
+}
+
+@keyframes popin{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/*LOADER*/
+
+.contact_form_loader i{
+    font-size: 40px;
+    color: var(--primaryColor);
+    margin-right: 5px;
+}
+
+.contact_form_loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--listBackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--primaryColor);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+/*LOADER*/

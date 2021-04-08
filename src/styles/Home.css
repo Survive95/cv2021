@@ -1,0 +1,113 @@
+.home_container{
+    background-color: var(--backgroundSection);
+    height: calc(100vh - 80px);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.home_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.home_box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home_title{
+    font-size: 50px;
+    color: var(--textColorBlack);
+}
+
+.home_text{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.home_aboutMe{
+    font-size: 25px;
+    width: 90%;
+    font-weight: 500;
+}
+
+.home_quality{
+    font-size: 25px;
+    width: 90%;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.home_link{
+    background-color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 8px 15px;
+    border-radius: 3px 10px 10px 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.home_link:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 10px var(--shadowColor);
+}
+
+.home_image_container{
+    position: relative;
+}
+
+.home_image_container::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: var(--backgroundProfil);
+    display: block;
+    position: absolute;
+    top: -22px;
+    left: -20px;
+    border-radius: 100px;
+}
+
+.home_image_container::after{
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: var(--backgroundProfil);
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -35px;
+    border-radius: 100px;
+}
+
+.home_image{
+    width: 300px;
+    border-radius: 10px 30px 30px 30px ;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.068);
+    background: var(--backgroundProfil);
+    box-shadow: 10px 10px 0 var(--shadowColor);
+}
+
+.home_footer_svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    pointer-events: none;
+}
+
+.home_footer_svg path{
+    fill: var(--primaryColor);
+    
+}
+

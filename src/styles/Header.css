@@ -1,0 +1,125 @@
+.header_app{
+    background-color: var(--backgroundApp);
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+    transition: 0s;
+}
+
+.header_app.active{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
+}
+
+.header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.header_title{
+    font-size: 25px;
+    color: var(--textColorBlack);
+    font-weight: 600;
+}
+
+.header_title a{
+    text-decoration: none;
+}
+
+.header_nav{}
+
+.header_nav_list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header_nav_list_item{
+    margin-left: 20px;
+}
+
+.header_nav_list_item a{
+    text-decoration: none;
+    color: var(--textColorBlack);
+    font-weight: 600;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    user-select: none;
+    transition: 0.2s;
+    position: relative;
+}
+
+.header_nav_list_item a:hover::before{
+    opacity: 1;
+}
+
+.header_nav_list_item a.selected{
+    color: var(--primaryColor);
+}
+
+.header_nav_list_item a::after{
+    opacity: 0;
+    position: absolute;
+    height: 5px;
+    content: "";
+    width: 20px;
+    background-color: var(--primaryColor);
+    display: block;
+    border-radius: 10px;
+    bottom: -8px;
+    transition: 0.2s;
+    pointer-events: none;
+}
+.header_nav_list_item a::before{
+    opacity: 0;
+    position: absolute;
+    height: 5px;
+    content: "";
+    width: 5px;
+    background-color: var(--primaryColor);
+    display: block;
+    border-radius: 10px;
+    bottom: -8px;
+    left: 0px;
+    transition: 0.5s cubic-bezier(.85,.33,.16,1.64);
+    pointer-events: none;
+}
+
+.header_nav_list_item a.selected::after{
+    opacity: 1;
+    animation: size 0.4s cubic-bezier(.85,.33,.16,1.64);
+}
+
+.header_nav_list_item a.selected::before{
+    opacity: 1;
+    left: 25px;
+}
+
+@keyframes size{
+    0%{width: 0;}
+    100%{width: 1;}
+}
+
+.header_light{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: var(--textColorBlack);
+    transition: 0.2s;
+}
+
+.header_light i{
+    transition: 0.2s;
+}
+
+.header_light:hover i{
+    color: var(--primaryColor);
+}
